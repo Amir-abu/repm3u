@@ -1,0 +1,359 @@
+html {
+font-size: 14px;
+}
+html,
+body {
+width: 100%;
+height: 100%;
+}
+* {
+margin: 0;
+padding: 0;
+outline: none;
+-webkit-appearance: none;
+}
+a {
+color: #333;
+text-decoration: none;
+}
+.hide {
+display: none;
+}
+.wrap {
+width: 100%;
+height: 100%;
+overflow: hidden;
+}
+.wrap .left-panel {
+width: 300px;
+height: 100%;
+float: left;
+}
+.wrap .left-panel #appMenuToggle {
+width: 100%;
+height: 50px;
+line-height: 50px;
+background:#0a0a0a;
+color: #ffffff;
+display: block;
+position: relative;
+z-index: 99;
+}
+.wrap .left-panel #appMenuToggle:hover,
+.wrap .left-panel #appMenuToggle.on {
+background:#0a0a0a;
+}
+.wrap .left-panel #appMenuToggle .icon {
+width: 20px;
+height: 25px;
+top: 12px;
+left: 20px;
+display: block;
+position: absolute;
+z-index: 1;
+overflow: hidden;
+}
+.wrap .left-panel #appMenuToggle .icon b,
+.wrap .left-panel #appMenuToggle .icon i {
+width: 100%;
+height: 2px;
+margin: 5px 0;
+background: #ffffff;
+display: block;
+}
+.wrap .left-panel #appMenuToggle .title {
+margin: 0 0 0 1.5em;
+}
+.wrap .left-panel .channel-list-panel {
+width: 100%;
+border-right: 1px solid #e9ebed;
+box-sizing: border-box;
+}
+.wrap .left-panel .channel-list-panel .search-panel {
+background: #0a0a0a;
+width: 100%;
+padding: 12px 0;
+}
+.wrap .left-panel .channel-list-panel .search-panel #channelSearchBox {
+width: 93%;
+height: 35px;
+line-height: 35px;
+margin: 0 auto;
+padding: 0 10px;
+background: #f2f2f2;
+border: 1px solid transparent;
+border-radius: 2px;
+color: #a0a8b0;
+font-size: 12px;
+box-sizing: border-box;
+display: block;
+-webkit-transition: .3s all ease;
+transition: .3s all ease;
+}
+.wrap .left-panel .channel-list-panel .search-panel #channelSearchBox:focus {
+border: 2.3px solid rgb(64, 195, 243);
+background: #ffffff;
+}
+.wrap .left-panel .channel-list-panel #channelList {
+width: 100%;
+overflow: auto;
+-webkit-overflow-scrolling: touch;
+}
+.wrap .left-panel .channel-list-panel #channelList::-webkit-scrollbar {
+width: 1px;
+height: 32px;
+background-color: transparent;
+}
+.wrap .left-panel .channel-list-panel #channelList::-webkit-scrollbar-track {
+background-color: transparent;
+}
+.wrap .left-panel .channel-list-panel #channelList::-webkit-scrollbar-thumb {
+background-color: #c3c3c3;
+}
+.wrap .left-panel .channel-list-panel #channelList li {
+color: #fff;
+background: #1c1c1c;
+text-decoration: bold;
+padding: 10px 20px;
+border-top: 1px solid #0a0a0a;
+cursor: pointer;
+box-sizing: border-box;
+overflow: hidden;
+}
+.wrap .left-panel .channel-list-panel #channelList li:hover {
+background:#fff;color:#0a0a0a;
+}
+.wrap .left-panel .channel-list-panel #channelList li.curr {
+background:#fff;
+color: #0a0a0a;
+}
+.wrap .left-panel .channel-list-panel #channelList li.curr .num {
+background:gold;
+color:#0a0a0a;
+}
+.wrap .left-panel .channel-list-panel #channelList li.hide {
+display: none;
+}
+.wrap .left-panel .channel-list-panel #channelList li .num {
+width: 28px;
+height: 20px;
+margin: 0 10px 0 0;
+line-height: 20px;
+background:gold;
+color: #0a0a0a;
+border-radius: 5px;
+text-align: center;
+font-size: 12px;
+float: left;
+display: block;
+}
+.wrap .right-panel {
+float: left;
+}
+.wrap .right-panel .prog-info {
+width: 100%;
+height: 50px;
+background:#0a0a0a;
+color: #ffffff;
+}
+.wrap .right-panel .prog-info a {
+color: #ffffff;
+}
+.wrap .right-panel .prog-info #chTitle {
+height: 100%;
+padding: 0 20px;
+line-height: 50px;
+cursor: pointer;
+display: block;
+float: left;
+}
+.wrap .right-panel .prog-info #chBack {
+height: 100%;
+padding: 0 20px;
+line-height: 50px;
+cursor: pointer;
+display: block;
+float: left;
+font-size: 1.5em;
+background:gold;color:#0a0a0a;
+}
+.wrap .right-panel .prog-info #chTitle:hover {
+background:#0a0a0a;color:#fff;
+}
+.wrap .right-panel .prog-info #chTitle.hide,
+.wrap .right-panel .prog-info #chBack.hide {
+display: none;
+}
+.wrap .right-panel .prog-info .menu {
+height: 100%;
+float: right;
+}
+.wrap .right-panel .prog-info .menu li {
+height: 100%;
+list-style: none;
+float: left;
+}
+.wrap .right-panel .prog-info .menu li a {
+height: 100%;
+padding: 0 15px;
+line-height: 50px;
+display: block;
+cursor: pointer;
+}
+.wrap .right-panel .prog-info .menu li a:hover {
+background:#1c1c1c;color:#fff;
+}
+.wrap .right-panel .prog-info .menu li .hide {
+display: none;
+}
+.wrap .right-panel .player-panel {
+position: relative;
+}
+.wrap .right-panel .player-panel #hlsPlayer {
+width: 100%;
+height: 100%;
+}
+.wrap .right-panel .player-panel #itemInfo.hide {
+display: none;
+}
+.wrap .right-panel .player-panel #itemInfo {
+position: absolute;
+color: #000;
+background-color: #fff;
+top: 0;
+left: 0;
+min-width: 30%;
+margin: 1em;
+border-width: 0 0 1px 0;
+border-color: #666;
+}
+.wrap .right-panel .player-panel #itemInfo .nowPlayingLabel {
+width: 100%;
+height: 40px;
+line-height: 40px;
+background: #0a0a0a;
+color: #ffffff;
+display: block;
+text-indent: 1em;
+}
+.wrap .right-panel .player-panel #itemInfo #nowPlaying {
+height: 40px;
+padding: 0 10px;
+line-height: 30px;
+background: #ffffff;
+width: 90%;
+border: none;
+}
+.wrap .right-panel .player-panel #hlsPlayer .vjs-big-play-button {
+display: none;
+}
+.mask {
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+background: rgba(0, 0, 0, 0.9);
+position: fixed;
+z-index: 100;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.mask .win > .t {
+width: 100%;
+height: 40px;
+line-height: 40px;
+background: #0a0a0a;
+color: #ffffff;
+display: block;
+text-indent: 1em;
+}
+.mask .win > .dismiss {
+position: absolute;
+color: rgba(255, 255, 255, .75);
+top: 0;
+right: 0;
+line-height: 40px;
+font-size: 1.4em;
+cursor: pointer;
+height: 40px;
+padding: 0 15px;
+}
+.mask .win > .dismiss:hover {
+background: #0a0a0a;
+}
+.mask .win > .dismiss:active,
+.wrap .right-panel .prog-info #chBack:active,
+.wrap .right-panel .prog-info .menu li a:active,
+.wrap .right-panel .prog-info #chTitle:active,
+.wrap .left-panel #appMenuToggle:active {
+color: rgba(255, 255, 255, .25);
+}
+.mask .win.setting_panel {
+width: 500px;
+background:#1c1c1c;color:#fff;
+display: inline-block;
+position: relative;
+}
+.mask .win.setting_panel .ent {
+width: 93%;
+margin: 0 auto;
+}
+.mask .win.setting_panel .ent input {
+width: 100%;
+margin: 20px 0;
+display: block;
+outline: none;
+box-sizing: border-box;
+}
+.mask .win.setting_panel .ent input[type='text'],
+.mask .win.setting_panel .ent input[type='password'] {
+height: 30px;
+padding: 0 10px;
+line-height: 30px;
+background: #ffffff;
+border-width: 0 0 1px 0;
+border-color: #0a0a0a;
+width: 100%;
+border-radius: 0px;
+-webkit-transition: .1s all ease;
+transition: .1s all ease;
+}
+.mask .win.setting_panel .ent input[type='text']:focus,
+.mask .win.setting_panel .ent input[type='password']:focus {
+border-width: 0 0 2.3px 0;
+border-color: rgb(64, 195, 243);
+}
+.mask .win.setting_panel .ent input[type='button'] {
+height: 32px;
+line-height: 32px;
+background: #ffffff;
+border: 1px solid #0a0a0a;
+color: #0a0a0a;
+cursor: pointer;
+width: 20%;
+float: right;
+border-radius: 0px;
+}
+.mask .win.setting_panel .ent input[type='button']:hover {
+background: #0a0a0a;
+color: #ffffff;
+}
+@media screen and (max-width : 768px) {
+.wrap .left-panel {
+width: 100%;
+}
+.mask .win.setting_panel {
+width: 100%;
+height: 100%;
+}
+.mask .win > .t {
+height: 50px;
+line-height: 50px;
+}
+.mask .win > .dismiss {
+height: 50px;
+line-height: 50px;
+padding: 0 18px;
+}
+}
